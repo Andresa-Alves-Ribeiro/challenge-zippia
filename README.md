@@ -15,9 +15,11 @@
 
 **Desktop View**
 
+![web](https://user-images.githubusercontent.com/94997593/220264987-9569d62b-4b68-4bd3-8ed1-f0acb48ec046.png)
 
 **Mobile View** <br/>
 
+![mobile](https://user-images.githubusercontent.com/94997593/220265012-21308180-45c9-4d05-b832-685c9c031c18.png)
 
 &nbsp;
 <a id="-about-the-project"></a>
@@ -81,7 +83,7 @@ You can access the link below and view the deployment on Vercel:
 
 &nbsp;
 
-https://ip-tracker-ashen.vercel.app/
+https://challenge-zippia.vercel.app/test/jobs
 
 &nbsp;
 
