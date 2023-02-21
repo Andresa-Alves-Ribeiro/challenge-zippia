@@ -1,0 +1,8 @@
+{
+    "routes": [
+        {
+            "src": "/test/jobs/.*",
+            "dest": "/jobs/index.html"
+        }
+    ]
+}
