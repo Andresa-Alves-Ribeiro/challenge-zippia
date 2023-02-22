@@ -191,20 +191,22 @@ export default function JobsList() {
       <div className="row mt-5">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job) => (
-            <div className="row justify-content-center mt-5" key={job.jobId}>
-              <Card className="text-center" style={{ background: "linear-gradient(to bottom, #ff3ea5 , #0000ff)", borderRadius: "100px", boxShadow: "0px 0px 55px rgba(0, 0, 0, 0.5)", maxWidth: "80%", color: "#fff" }}>
+            <div className="col-4 justify-content-center mt-5" key={job.jobId}>
+              <Card className="text-center" style={{ background: "#1c74ff", borderRadius: "50px", boxShadow: "0px 0px 55px rgba(0, 0, 0, 0.25)", marginLeft: "0.8vw", marginRight: "0.8vw", maxWidth: "100%", color: "#fff"}}>
                 <Card.Body className="d-flex flex-column justify-content-center align-items-center mt-5">
-                  <Card.Title style={{ fontSize: "28px" }}>{job.jobTitle}</Card.Title>
-                  <Card.Subtitle className="mt-3" style={{ fontSize: "18px" }}>{job.companyName}</Card.Subtitle>
-                  <p className="mt-1" style={{ fontStyle: "italic" }}>{job.location}</p>
-                  <Card.Text className="mt-5" style={{ textAlign: "justify", textJustify: "inter-word", paddingLeft: "40px", paddingRight: "40px" }}>{job.jobDescription.replace(/<\/?[^>]+(>|$)/g, "")}</Card.Text>
+                  <Card.Title style={{ fontSize: "26px" }}>{job.jobTitle}</Card.Title>
+                  <Card.Subtitle className="mt-3" style={{ fontSize: "16px" }}>{job.companyName}</Card.Subtitle>
+                  <p className="mt-1" style={{ fontStyle: "italic", fontSize: "14px" }}>{job.location}</p>
+                  <div className="mt-4" style={{ textAlign: "justify", paddingLeft: "10px", paddingRight: "10px", width: "100%", maxHeight: "30vh", overflow: "auto", borderRadius: "15px", color: "#fff"}}>
+                    <Card.Text className="mt-3" style={{ textAlign: "justify" }}>{job.jobDescription.replace(/<\/?[^>]+(>|$)/g, "")}</Card.Text> 
+                  </div>
                   <p className="mt-5" style={{ fontStyle: "italic" }}>{formatPostingDate(job.postingDate)}</p>
                 </Card.Body>
               </Card>
             </div>
           ))
         ) : (
-          <p className="d-flex flex-wrap justify-content-center align-items-center mt-5">No jobs found</p>
+          <p className="d-flex flex-wrap justify-content-center align-items-center mt-5" style={{ fontSize: "26px", fontWeight: "bold" }}>No jobs found</p>
         )}
       </div>
     </>
