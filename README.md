@@ -20,7 +20,7 @@
 
 **Mobile View** <br/>
 
-![mobile](https://user-images.githubusercontent.com/94997593/220798353-e0a7d00c-9e91-402c-8188-b65c3aa932d9.png)
+![mobile](https://user-images.githubusercontent.com/94997593/220799185-7ceb44a7-0ed9-4ea8-80fa-cfd3f7e5c211.png)
 
 &nbsp;
 <a id="-about-the-project"></a>
