@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button, Form, Card } from 'react-bootstrap';
-import Wave from '../../assets/wave2.png';
 
 /* This code below defines a data type (a fundamental concept in programming that refers to the type of value a variable or constant can store) called "Job", 
 which is an object with the following properties:
@@ -40,7 +39,7 @@ export default function JobsList() {
   const [filteredJobs, setFilteredJobs] = useState<Job[]>([]);
   const [sorting, setSorting] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [postingDateRange, setPostingDateRange] = useState<string>("7");
+  const [postingDateRange, setPostingDateRange] = useState<string>("30");
 
   /* This code below is executed when the user types something into a search field in the input.
   The function receives a change event (ChangeEvent) from React, which is triggered whenever the value of a form field is changed.
@@ -189,28 +188,28 @@ export default function JobsList() {
         </div>
       </div>
 
-      <div className="row mt-5">
-  {filteredJobs.length > 0 ? (
-    filteredJobs.map((job) => (
-      <div className="col-12 col-sm-6 col-md-4 col-lg-4 justify-content-center mt-5" key={job.jobId}>
-        <Card className="text-center" style={{ background: "#1c74ff", borderRadius: "50px", boxShadow: "0px 0px 55px rgba(0, 0, 0, 0.25)", marginLeft: "0.8vw", marginRight: "0.8vw", maxWidth: "100%", color: "#fff" }}>
-          <img src="../../assets/wave2.png" alt="Descrição da imagem" />
-          <Card.Body className="d-flex flex-column justify-content-center align-items-center mt-5">
-            <Card.Title style={{ fontSize: "26px" }}>{job.jobTitle}</Card.Title>
-            <Card.Subtitle className="mt-3" style={{ fontSize: "16px" }}>{job.companyName}</Card.Subtitle>
-            <p className="mt-1" style={{ fontStyle: "italic", fontSize: "14px" }}>{job.location}</p>
-            <div className="mt-4" style={{ textAlign: "justify", paddingLeft: "10px", paddingRight: "10px", width: "100%", maxHeight: "30vh", overflow: "auto", borderRadius: "15px", color: "#fff" }}>
-              <Card.Text className="mt-3" style={{ textAlign: "justify" }}>{job.jobDescription.replace(/<\/?[^>]+(>|$)/g, "")}</Card.Text>
+      <div className="row mt-5 mb-5" style={{ marginLeft: "1.5vw", marginRight: "1.5vw", maxWidth: "100%" }}>
+        {filteredJobs.length > 0 ? (
+          filteredJobs.map((job) => (
+            <div className="col-10 col-sm-6 col-md-4 col-lg-3 justify-content-center mt-5" key={job.jobId}>
+              <Card className="text-center" style={{ backgroundImage: "linear-gradient(to top, #0250c5 0%, #eb144c 100%)", borderRadius: "50px", boxShadow: "0px 0px 55px rgba(0, 0, 0, 0.25)", color: "#fff" }}>
+                <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" style={{ borderRadius: "50px" }} className="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="99%" y1="61%" x2="1%" y2="39%"><stop offset="5%" stop-color="#343a40"></stop><stop offset="95%" stop-color="#eb144c"></stop></linearGradient></defs><path d="M 0,700 C 0,700 0,175 0,175 C 82.133971291866,150.20574162679426 164.267942583732,125.41148325358853 254,130 C 343.732057416268,134.58851674641147 441.0622009569378,168.5598086124402 541,197 C 640.9377990430622,225.4401913875598 743.4832535885166,248.34928229665073 851,233 C 958.5167464114834,217.65071770334927 1071.0047846889954,164.04306220095694 1170,148 C 1268.9952153110046,131.95693779904306 1354.4976076555022,153.47846889952154 1440,175 C 1440,175 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" className="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 350)"></path><defs><linearGradient id="gradient" x1="99%" y1="61%" x2="1%" y2="39%"><stop offset="5%" stop-color="#343a40"></stop><stop offset="95%" stop-color="#eb144c"></stop></linearGradient></defs><path d="M 0,700 C 0,700 0,350 0,350 C 93.65550239234452,368.4019138755981 187.31100478468903,386.80382775119614 287,397 C 386.68899521531097,407.19617224880386 492.4114832535885,409.1866028708134 595,387 C 697.5885167464115,364.8133971291866 797.043062200957,318.44976076555025 900,301 C 1002.956937799043,283.55023923444975 1109.4162679425838,295.0143540669856 1200,308 C 1290.5837320574162,320.9856459330144 1365.2918660287082,335.4928229665072 1440,350 C 1440,350 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" className="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 350)"></path><defs><linearGradient id="gradient" x1="99%" y1="61%" x2="1%" y2="39%"><stop offset="5%" stop-color="#343a40"></stop><stop offset="95%" stop-color="#eb144c"></stop></linearGradient></defs><path d="M 0,700 C 0,700 0,525 0,525 C 114.95693779904306,554.8277511961722 229.91387559808612,584.6555023923445 332,573 C 434.0861244019139,561.3444976076555 523.3014354066987,508.2057416267943 604,498 C 684.6985645933013,487.7942583732057 756.8803827751196,520.5215311004785 845,542 C 933.1196172248804,563.4784688995215 1037.177033492823,573.7081339712919 1139,569 C 1240.822966507177,564.2918660287081 1340.4114832535884,544.6459330143541 1440,525 C 1440,525 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" className="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 350)"></path></svg>
+                <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                  <Card.Title style={{ fontSize: "1.3rem", fontFamily: "'Inter', sans-serif" }}>{job.jobTitle}</Card.Title>
+                  <Card.Subtitle className="mt-3" style={{ fontSize: "15px" }}>{job.companyName}</Card.Subtitle>
+                  <p className="mt-1" style={{ fontStyle: "italic", fontSize: "14px" }}>{job.location}</p>
+                  <div className="mt-3" style={{ background: "rgba(255, 255, 255, 0.2)", opacity: "0.7", textAlign: "justify", width: "100%", maxHeight: "35vh", overflow: "auto", borderRadius: "15px", color: "#fff", padding: "1px", border: "3px solid blue" }}>
+                    <Card.Text className="mt-3" style={{ textAlign: "justify", paddingLeft: "20px", paddingRight: "20px", fontFamily: "'Roboto', sans-serif", fontSize: "14px" }}>{job.jobDescription.replace(/<\/?[^>]+(>|$)/g, "")}</Card.Text>
+                  </div>
+                  <p className="mt-4" style={{ fontWeight: "bold", fontSize: "16px" }}>{formatPostingDate(job.postingDate)}</p>
+                </Card.Body>
+              </Card>
             </div>
-            <p className="mt-5" style={{ fontStyle: "italic" }}>{formatPostingDate(job.postingDate)}</p>
-          </Card.Body>
-        </Card>
+          ))
+        ) : (
+          <p className="d-flex flex-wrap justify-content-center align-items-center mt-5" style={{ fontSize: "26px", fontWeight: "bold" }}>No jobs found</p>
+        )}
       </div>
-    ))
-  ) : (
-    <p className="d-flex flex-wrap justify-content-center align-items-center mt-5" style={{ fontSize: "26px", fontWeight: "bold" }}>No jobs found</p>
-  )}
-</div>
 
     </>
   );
