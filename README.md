@@ -15,11 +15,12 @@
 
 **Desktop View**
 
-![web](https://user-images.githubusercontent.com/94997593/220264987-9569d62b-4b68-4bd3-8ed1-f0acb48ec046.png)
+![web](https://user-images.githubusercontent.com/94997593/220798320-974d172e-bd7a-4e0d-b9c2-5ed9e00957df.png)
+
 
 **Mobile View** <br/>
 
-![mobile](https://user-images.githubusercontent.com/94997593/220265012-21308180-45c9-4d05-b832-685c9c031c18.png)
+![mobile](https://user-images.githubusercontent.com/94997593/220798353-e0a7d00c-9e91-402c-8188-b65c3aa932d9.png)
 
 &nbsp;
 <a id="-about-the-project"></a>
